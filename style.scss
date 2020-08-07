@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  background: #232323;
+
+  color: whitesmoke;
+
+  h1 {
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+button {
+  margin: 0;
+  color: steelblue;
+  padding: 8px 20px;
+  background-color: transparent;
+
+  border: 0px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  &:hover {
+    @import url(https://fonts.googleapis.com/css?family=Maven+Pro:regular,500,600,700,800,900);
+    background-color: steelblue;
+    color: rgb(235, 233, 233);
+  }
+}
+
+.displayBanner {
+  line-height: 1.4;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  span {
+    font-size: 50px;
+  }
+}
+
+.box_container {
+  margin: 50px auto;
+  max-width: fit-content;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  justify-items: center;
+  
+}
+
+.box1, .box4{
+  animation: fadeInLeft 0.6s linear;
+}
+.box3, .box6{
+  animation: fadeInRight 0.6s linear;
+}
+.box2{
+  animation: fadeInUp 0.6s linear;
+}
+.box5{
+  animation: fadeInDown 0.6s linear;
+}
+
+.optionMenu {
+  text-transform: inherit;
+  color: black;
+  background-color: whitesmoke;
+
+  width: 100vw;
+
+  .adjust {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    span{
+      font-weight: bold;
+      color: steelblue;
+    }
+  }
+
+
+
+  .diff {
+    display: flex;
+  }
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+}
+
+.square {
+  transition: all 0.4s;
+  border-radius: 10px;
+  background: purple;
+  width: 100%;
+  
+}
+
+.noShow {
+  display: none;
+}
+
+.selected {
+  background-color: steelblue;
+  color: rgb(235, 233, 233);
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translateX(-30px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+} 
+
+@keyframes fadeInRight {
+  0% {
+     opacity: 0;
+     transform: translateX(30px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+} 
+@keyframes fadeInUp {
+  0% {
+     opacity: 0;
+     transform: translateY(-30px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+} 
+@keyframes fadeInDown {
+  0% {
+     opacity: 0;
+     transform: translateY(30px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+} 
